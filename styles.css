@@ -15,7 +15,7 @@ body {
     background-color: var(--my-bg);
 }
 
-header {
+#navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,7 @@ header {
     padding: 1rem 3rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
@@ -32,7 +32,8 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    align-items: center;
+    gap: 30px;
 }
 
 nav ul li a {
@@ -48,8 +49,12 @@ nav ul li a:hover {
     transition: all 0.3s ease-in-out
 }
 
+nav img {
+    width: 35px;
+}
 
-#main-sec {
+
+#welcome-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,9 +62,11 @@ nav ul li a:hover {
     padding: 5rem 2.5rem;
     height: 90vh;
     border-bottom: 1px solid gray;
+    text-align: center;
+    margin-top: 90px;
 }
 
-#main-sec h1 {
+#welcome-section h1 {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 2rem;
@@ -67,7 +74,7 @@ nav ul li a:hover {
     /* Make the h1 a positioning context */
 }
 
-#main-sec p {
+#welcome-section p {
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2rem;
@@ -89,46 +96,51 @@ nav ul li a:hover {
 #background-sec h3 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
 .background-credentials {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 5rem;
 }
 
 #background-sec img {
-    width: 10%;
-  }
+    width: 50px;
+    margin-bottom: 40px;
+}
 
 .bar {
     display: block;
-    width: 40px;
+    width: 50px;
     height: 3px;
     border-radius: 10px;
     background-color: black;
+    margin: 10px 0;
 }
-.background-item{
+
+.background-item {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
 
 }
 
-#projects-sec {
+#projects {
     padding: 40px 5%;
     text-align: center;
     border-bottom: 1px solid gray;
 }
 
-#projects-sec h2 {
+#projects h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-#projects-sec h3 {
+#projects h3 {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -142,7 +154,7 @@ nav ul li a:hover {
     gap: 30px;
 }
 
-.project-card {
+.project-tile {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -154,16 +166,17 @@ nav ul li a:hover {
     flex: 30%;
     gap: 15px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and box-shadow properties */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Add transition for transform and box-shadow properties */
 }
 
-.project-card:hover {
+.project-tile:hover {
     transform: rotate(-5deg);
     box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
 }
 
 
-.project-card img {
+.project-tile img {
     width: 100%;
 }
 
@@ -179,10 +192,40 @@ nav ul li a:hover {
     border: 1px solid black;
     background: linear-gradient(#000 0 0) var(--p, 0) / var(--p, 0) no-repeat;
     color: black;
-    transition: background 0.5s ease, color 0.3s ease-in-out; /* Add transition for background and color properties */
+    transition: background 0.5s ease, color 0.3s ease-in-out;
+    /* Add transition for background and color properties */
 }
 
 #see-more:hover {
     --p: 100%;
     color: var(--my-bg);
+}
+
+@media (max-width: 669px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 1rem;
+        gap: 10px;
+    }
+
+    #welcome-section {
+        padding: 5rem 3rem;
+        margin-top: 120px;
+    }
+
+    .background-credentials {
+        flex-direction: column;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        padding: 0 20px;
+
+    }
+
+    .project-tile {
+        width: 100%;
+        flex: 100%;
+    }
 }
