@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,300&family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Raleway, sans-serif;
+}
+
+:root {
+    --my-bg: #F4F1EB
+}
+
+body {
+    background-color: var(--my-bg);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-indent: 5px;
+}
+
+nav ul li a:hover {
+    color: #797877;
+    transition: all 0.3s ease-in-out
+}
+
+
+#main-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2.5rem;
+    height: 90vh;
+    border-bottom: 1px solid gray;
+}
+
+#main-sec h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    /* Make the h1 a positioning context */
+}
+
+#main-sec p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#background-sec {
+    padding: 40px 5%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+#background-sec h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#background-sec h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.background-credentials {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#background-sec img {
+    width: 10%;
+  }
+
+.bar {
+    display: block;
+    width: 40px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: black;
+}
+.background-item{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#projects-sec {
+    padding: 40px 5%;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+#projects-sec h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#projects-sec h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 20%;
+    padding: 15px 10px;
+    flex: 30%;
+    gap: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for transform and box-shadow properties */
+}
+
+.project-card:hover {
+    transform: rotate(-5deg);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.project-card img {
+    width: 100%;
+}
+
+#see-more {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-indent: 5px;
+    padding: 5px 10px;
+    margin-top: 35px;
+    border: 1px solid black;
+    background: linear-gradient(#000 0 0) var(--p, 0) / var(--p, 0) no-repeat;
+    color: black;
+    transition: background 0.5s ease, color 0.3s ease-in-out; /* Add transition for background and color properties */
+}
+
+#see-more:hover {
+    --p: 100%;
+    color: var(--my-bg);
+}
