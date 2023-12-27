@@ -96,13 +96,13 @@ nav img {
 #background-sec h3 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .background-credentials {
     display: flex;
     justify-content: center;
-    gap: 5rem;
+    gap: 10rem;
 }
 
 #background-sec img {
@@ -166,13 +166,13 @@ nav img {
     flex: 30%;
     gap: 15px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Add transition for transform and box-shadow properties */
+    transform: rotate(180deg);
+    transition: all 1s ease-in-out;
 }
 
 .project-tile:hover {
-    transform: rotate(-5deg);
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(360deg) scale(1.07);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -224,8 +224,13 @@ nav img {
 
     }
 
+    #navbar {
+        padding: 1rem 1rem;
+    }
+
     .project-tile {
         width: 100%;
         flex: 100%;
+        transform: none;
     }
 }
