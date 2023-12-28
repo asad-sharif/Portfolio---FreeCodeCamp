@@ -79,7 +79,7 @@ nav img {
     right: 20px;
     bottom: 10px;
     background-color: gray;
-    /* opacity: 0.5; */
+    opacity: 0.5;
     width: 9.5rem;
     height: 20px;
     z-index: -1;
@@ -220,12 +220,15 @@ nav img {
     }
 
     #welcome-section {
-        padding: 5rem 3rem;
-        margin-top: 120px;
+        padding: 5rem 2rem;
+    }
+    #welcome-section h1::after {
+        right: 90px; /* Adjust the right position for smaller screens */
     }
 
     .background-credentials {
         flex-direction: column;
+        gap: 3rem;
     }
 
     .project-cards {
