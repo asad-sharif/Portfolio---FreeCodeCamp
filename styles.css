@@ -222,8 +222,9 @@ nav img {
     #welcome-section {
         padding: 5rem 2rem;
     }
+
     #welcome-section h1::after {
-        right: 90px; /* Adjust the right position for smaller screens */
+        content: none;
     }
 
     .background-credentials {
