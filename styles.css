@@ -70,17 +70,19 @@ nav img {
     font-weight: 700;
     margin-bottom: 2rem;
     position: relative;
+    z-index: 1;
 }
 
-#welcome-section h1::before {
+#welcome-section h1::after {
     content: '';
     position: absolute;
     right: 20px;
     bottom: 10px;
     background-color: gray;
-    opacity: 0.5;
+    /* opacity: 0.5; */
     width: 9.5rem;
     height: 20px;
+    z-index: -1;
 }
 
 #welcome-section p {
