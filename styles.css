@@ -274,11 +274,17 @@ nav img {
 
 #footer-sec img {
     width: 30px;
-    filter: invert() brightness(150%);
+    filter: invert();
 }
 
 .footer-lower-content {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
